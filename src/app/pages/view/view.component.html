@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col">
+        <div class="card shadow-lg">
+          <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Product List</h3>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-striped table-hover mb-0">
+              <thead class="table-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Product Name</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of productList">
+                  <th scope="row">{{product.id}}</th>
+                  <td>{{product.name}}</td>
+                  <td>{{product.description}}</td>
+                  <td>{{product.category}}</td>
+                  <td>{{product.price}}</td>
+                  <td>
+                    <button class="btn btn-danger btn-sm" (click)="deleteProduct(product)">
+                      <i class="bi bi-trash-fill"></i> Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+/* registration.component.css */
+body {
+    background-color: #f8f9fa; /* Light gray background for the whole page */
+}
+
+.card {
+    border-radius: 10px; /* Rounded corners for the card */
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0; /* Rounded corners for the card header */
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05); /* Light gray background for odd rows */
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: rgba(0, 0, 0, 0.075); /* Slightly darker gray for hover effect */
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Red color for delete button */
+    border-color: #dc3545; /* Match border color with background */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130; /* Match border color on hover */
+}
+
+.bi-trash-fill {
+    margin-right: 5px; /* Add space between icon and text */
+}

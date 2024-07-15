@@ -1,0 +1,41 @@
+<!-- registration.component.html -->
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="row g-0">
+                    <div class="col-md-6 d-flex justify-content-center align-items-center bg-light p-4">
+                        <img width="300px" src="../../../assets/products.webp" class="img-fluid" alt="Product Image" />
+                    </div>
+                    <div class="col-md-6">
+                        <form class="p-4">
+                            <h2 class="mb-4 text-center">Register Product</h2>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Product Name</label>
+                                <input type="text" id="inputName" [(ngModel)]="product.name" name="name" class="form-control" placeholder="Enter product name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputDescription" class="form-label">Description</label>
+                                <input type="text" id="exampleInputDescription" [(ngModel)]="product.description" name="description" class="form-control" placeholder="Enter product description">
+                            </div>
+                            <div class="mb-3">
+                                <label for="categorySelect" class="form-label">Category</label>
+                                <select id="categorySelect" class="form-select" [(ngModel)]="product.category" name="category">
+                                    <option selected disabled>Select category</option>
+                                    <option [value]="'BUN'">Bun</option>
+                                    <option [value]="'BEV'">Beverage</option>
+                                    <option [value]="'TAS'">Tasty</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="txt-price" class="form-label">Price</label>
+                                <input type="number" id="txt-price" [(ngModel)]="product.price" name="price" class="form-control" placeholder="Enter product price">
+                            </div>
+                            <button (click)="saveProduct()" type="button" class="btn btn-primary w-100">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
